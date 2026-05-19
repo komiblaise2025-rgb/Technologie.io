@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Drama Boss</title>
+
+  <!-- Fluid Player -->
+  <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background-color: #141414;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #e50914;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .player-container {
+      max-width: 900px;
+      margin: auto;
+      background: #000;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(229, 9, 20, 0.4);
+    }
+
+    video {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    p {
+      color: #ccc;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Netflix Drama Boss</h1>
+
+  <div class="player-container">
+    <video id="netflix-video" controls>
+      <!-- Remplace cette vidéo par la tienne -->
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <p>Regarde tes meilleurs dramas ici.</p>
+
+  <script>
+    fluidPlayer('netflix-video', {
+      vastOptions: {
+        adList: [
+          {
+            roll: 'preRoll',
+            vastTag: 'https://youradexchange.com/video/select.php?r=11334070'
+          }
+        ]
+      }
+    });
+  </script>
+
+</body>
+</html>

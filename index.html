@@ -11,7 +11,7 @@
   <style>
     body {
       margin: 0;
-      padding: 20px;
+      padding: 15px;
       background-color: #141414;
       color: white;
       font-family: Arial, sans-serif;
@@ -20,7 +20,7 @@
 
     h1 {
       color: #e50914;
-      font-size: 32px;
+      font-size: 30px;
       margin-bottom: 20px;
     }
 
@@ -28,14 +28,16 @@
       max-width: 900px;
       margin: auto;
       background: #000;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(229, 9, 20, 0.4);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(229, 9, 20, 0.3);
     }
 
     video {
       width: 100%;
-      border-radius: 8px;
+      max-height: 90vh;
+      object-fit: contain; /* adapte automatiquement 9:16 ou 16:9 */
+      background: black;
     }
 
     p {
@@ -49,9 +51,9 @@
   <h1>Netflix Drama Boss</h1>
 
   <div class="player-container">
-    <video id="netflix-video" controls>
-      <!-- Remplace cette vidéo par la tienne -->
-      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    <video id="netflix-video" controls playsinline>
+      <!-- Remplace par ta vidéo GitHub -->
+      <source src="video.mp4" type="video/mp4">
     </video>
   </div>
 

@@ -1,76 +1,114 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Netflix Drama Boss</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX DRAMA BOSS - Streaming Gratuit</title>
+    
+    <link rel="stylesheet" href="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.css" type="text/css"/>
+    <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+    
+    <style>
+        /* Design d'inspiration Netflix */
+        body { 
+            background-color: #141414; 
+            color: #FFFFFF; 
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            text-align: center; 
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* Barre de navigation / Header */
+        header {
+            background-color: #000000;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        }
+        
+        header h1 {
+            color: #E50914; /* Rouge emblématique */
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        header span {
+            color: #FFF;
+        }
 
-  <!-- Fluid Player -->
-  <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
 
-  <style>
-    body {
-      margin: 0;
-      padding: 15px;
-      background-color: #141414;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #E5E5E5;
+        }
+        
+        /* Conteneur du lecteur vidéo */
+        .video-wrapper { 
+            background-color: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7); 
+        }
 
-    h1 {
-      color: #e50914;
-      font-size: 30px;
-      margin-bottom: 20px;
-    }
-
-    .player-container {
-      max-width: 900px;
-      margin: auto;
-      background: #000;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(229, 9, 20, 0.3);
-    }
-
-    video {
-      width: 100%;
-      max-height: 90vh;
-      object-fit: contain; /* adapte automatiquement 9:16 ou 16:9 */
-      background: black;
-    }
-
-    p {
-      color: #ccc;
-      margin-top: 15px;
-    }
-  </style>
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
 
-  <h1>Netflix Drama Boss</h1>
+    <header>
+        <h1>NETFLIX <span>DRAMA BOSS</span></h1>
+    </header>
 
-  <div class="player-container">
-    <video id="netflix-video" controls playsinline>
-      <!-- Remplace par ta vidéo GitHub -->
-      <source src="video.mp4" type="video/mp4">
-    </video>
-  </div>
+    <div class="container">
+        <h2>Lecteur Principal — Regarder votre Drama</h2>
 
-  <p>Regarde tes meilleurs dramas ici.</p>
+        <div class="video-wrapper">
+            <video id="netflix-drama-player" controls poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+                <source src="https://archive.org/download/nom-de-votre-page/nom-du-film.mp4" type="video/mp4"/>
+            </video>
+        </div>
+    </div>
 
-  <script>
-    fluidPlayer('netflix-video', {
-      vastOptions: {
-        adList: [
-          {
-            roll: 'preRoll',
-            vastTag: 'https://youradexchange.com/video/select.php?r=11334070'
-          }
-        ]
-      }
-    });
-  </script>
+    <footer>
+        &copy; 2026 NETFLIX DRAMA BOSS - Tous droits réservés.
+    </footer>
+
+    <script>
+        // Configuration du lecteur Fluid Player avec votre publicité VAST Adcash
+        var dramaPlayer = fluidPlayer(
+            'netflix-drama-player',
+            {
+                layoutControls: {
+                    fillToContainer: true, // S'adapte parfaitement au bloc
+                    responsive: true,
+                    primaryColor: "#E50914" /* Change la couleur des boutons du player en rouge Netflix */
+                },
+                vastOptions: {
+                    adList: [
+                        {
+                            roll: 'preRoll', // La publicité se lance juste avant le début du drama
+                            vastTag: 'https://youradexchange.com/video/select.php?r=11333806' // Votre lien de pub unique
+                        }
+                    ]
+                }
+            }
+        );
+    </script>
 
 </body>
 </html>

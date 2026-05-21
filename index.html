@@ -156,6 +156,26 @@
                 }
             }
         );
+        // 3. Configuration du Troisième Lecteur (Épisode 3)
+        var dramaPlayer3 = fluidPlayer(
+            'netflix-drama-player-3',
+            {
+                layoutControls: {
+                    fillToContainer: true,
+                    responsive: true,
+                    primaryColor: "#E50914"
+                },
+                vastOptions: {
+                    adList: [
+                        {
+                            roll: 'preRoll',
+                            // Vous pouvez changer ce lien si vous avez une autre zone Adcash pour l'épisode 3
+                            vastTag: 'https://youradexchange.com/video/select.php?r=11340882' 
+                        }
+                    ]
+                }
+            }
+        );
     </script>
 
 </body>

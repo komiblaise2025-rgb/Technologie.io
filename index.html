@@ -23,6 +23,7 @@
             margin: 0;
         }
         
+        /* Barre de navigation / Header */
         header {
             background-color: #000000;
             padding: 20px;
@@ -30,7 +31,7 @@
         }
         
         header h1 {
-            color: #E50914; 
+            color: #E50914; /* Rouge emblématique */
             margin: 0;
             font-size: 2.2rem;
             letter-spacing: 2px;
@@ -38,7 +39,9 @@
             text-transform: uppercase;
         }
         
-        header span { color: #FFF; }
+        header span {
+            color: #FFF;
+        }
 
         .container {
             max-width: 900px;
@@ -53,27 +56,20 @@
             color: #E5E5E5;
         }
         
-        /* Format 16:9 fluide et responsive */
+        /* Conteneur vidéo - Format 16:9 strict sans déformation */
         .video-wrapper { 
             background-color: #000;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.7); 
-            margin-bottom: 20px;
             width: 100%;
             aspect-ratio: 16 / 9;
+            margin-bottom: 20px;
         }
 
         .video-wrapper video {
             width: 100% !important;
             height: 100% !important;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background: #333;
-            margin: 40px 0;
         }
 
         footer {
@@ -98,7 +94,7 @@
             </video>
         </div>
         
-        <hr>
+        <br><hr><br>
         
         <h2>Lecteur Secondaire — Épisode 2</h2>
         <div class="video-wrapper">
@@ -107,7 +103,7 @@
             </video>
         </div>
 
-        <hr>
+        <br><hr><br>
 
         <h2>Lecteur Secondaire — Épisode 3</h2>
         <div class="video-wrapper">
@@ -122,19 +118,22 @@
     </footer>
 
     <script>
-        // Initialisation directe sans enveloppe restrictive pour éviter les sauts de script
+        // Votre URL publicitaire VAST Adcash unique
         var adTagUrl = 'https://youradexchange.com/video/select.php?r=11341566';
 
+        // Configuration et activation de la pub sur le Lecteur 1
         var dramaPlayer1 = fluidPlayer('netflix-drama-player', {
             layoutControls: { fillToContainer: true, responsive: true, primaryColor: "#E50914" },
             vastOptions: { adList: [{ roll: 'preRoll', vastTag: adTagUrl }] }
         });
 
+        // Configuration et activation de la pub sur le Lecteur 2
         var dramaPlayer2 = fluidPlayer('netflix-drama-player-2', {
             layoutControls: { fillToContainer: true, responsive: true, primaryColor: "#E50914" },
             vastOptions: { adList: [{ roll: 'preRoll', vastTag: adTagUrl }] }
         });
 
+        // Configuration et activation de la pub sur le Lecteur 3
         var dramaPlayer3 = fluidPlayer('netflix-drama-player-3', {
             layoutControls: { fillToContainer: true, responsive: true, primaryColor: "#E50914" },
             vastOptions: { adList: [{ roll: 'preRoll', vastTag: adTagUrl }] }

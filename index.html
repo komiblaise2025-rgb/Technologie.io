@@ -1,151 +1,170 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NETFLIX DRAMA BOSS - Streaming Gratuit</title>
-    
-    <meta name="description" content="Regardez vos meilleurs dramas en streaming gratuit sur NETFLIX DRAMA BOSS. Profitez de nos lecteurs fluides et rapides pour suivre tous vos épisodes.">
-    
-    <!-- Préchargement de l'image de poster principale pour le performance (LCP) -->
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop" fetchpriority="high">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NETFLIX DRAMA BOSS - Streaming Gratuit</title>
 
-    <!-- Fluid Player CSS & JS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fluid-player@3.3.0/src/css/fluidplayer.css" type="text/css"/>
-    <script src="https://cdn.jsdelivr.net/npm/fluid-player@3.3.0/win/fluidplayer.min.js"></script>
-    
-    <style>
-        body { 
-            background-color: #141414; 
-            color: #FFFFFF; 
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-            text-align: center; 
-            padding: 0;
-            margin: 0;
-        }
-        
-        header {
-            background-color: #000000;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.8);
-        }
-        
-        header h1 {
-            color: #E50914; 
-            margin: 0;
-            font-size: 2.2rem;
-            letter-spacing: 2px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        
-        header span {
-            color: #FFF;
-        }
+<meta name="description" content="Regardez vos meilleurs dramas en streaming gratuit sur NETFLIX DRAMA BOSS.">
 
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
 
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin: 40px 0 20px 0;
-            color: #E5E5E5;
-        }
-        
-        /* Séparateur propre en CSS plutôt que <br><hr><br> */
-        .separator {
-            border: 0;
-            height: 1px;
-            background: #282828;
-            margin: 40px 0;
-        }
-        
-        .video-wrapper { 
-            background-color: #000;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.7); 
-            width: 100%;
-            aspect-ratio: 16 / 9;
-        }
+<link rel="stylesheet" href="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.css">
+<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
 
-        .video-wrapper video {
-            width: 100% !important;
-            height: 100% !important;
-        }
+<style>
+body{
+    background-color:#141414;
+    color:#ffffff;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
 
-        footer {
-            margin-top: 60px;
-            padding: 20px;
-            font-size: 0.8rem;
-            color: #555;
-        }
-    </style>
+header{
+    background:#000;
+    padding:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.8);
+}
+
+header h1{
+    margin:0;
+    color:#E50914;
+    font-size:2rem;
+    letter-spacing:2px;
+}
+
+header span{
+    color:white;
+}
+
+.container{
+    max-width:900px;
+    margin:30px auto;
+    padding:0 15px;
+}
+
+h2{
+    color:#e5e5e5;
+    font-weight:400;
+    margin:30px 0 15px;
+}
+
+.video-wrapper{
+    background:black;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.7);
+    margin-bottom:30px;
+}
+
+video{
+    width:100%;
+    height:auto;
+    max-height:80vh;
+    object-fit:contain;
+}
+
+hr{
+    border:none;
+    height:1px;
+    background:#333;
+    margin:40px 0;
+}
+
+footer{
+    color:#666;
+    font-size:14px;
+    padding:30px;
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>NETFLIX <span>DRAMA BOSS</span></h1>
-    </header>
+<header>
+    <h1>NETFLIX <span>DRAMA BOSS</span></h1>
+</header>
 
-    <div class="container">
-        <h2>Lecteur Principal — Épisode 1</h2>
-        <div class="video-wrapper">
-            <video class="drama-player" controls preload="none" poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
-                <source src="https://ik.imagekit.io/gnbfkh1vs/petal_20260521_160151.mp4" type="video/mp4"/>
-            </video>
-        </div>
-        
-        <hr class="separator">
-        
-        <h2>Lecteur Secondaire — Épisode 2</h2>
-        <div class="video-wrapper">
-            <video class="drama-player" controls preload="none" poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
-                <source src="https://ik.imagekit.io/gnbfkh1vs/episode-b.mp4" type="video/mp4"/>
-            </video>
-        </div>
+<div class="container">
 
-        <hr class="separator">
-
-        <h2>Lecteur Secondaire — Épisode 3</h2>
-        <div class="video-wrapper">
-            <video class="drama-player" controls preload="none" poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
-                <!-- Note : Pensez à renommer ce fichier en "episode-3.mp4" (sans accent) sur votre ImageKit si possible -->
-                <source src="https://ik.imagekit.io/gnbfkh1vs/%C3%A9pisode-3.mp4" type="video/mp4"/>
-            </video>
-        </div>
+    <h2>Lecteur Principal — Épisode 1</h2>
+    <div class="video-wrapper">
+        <video id="player1" controls poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+            <source src="https://ik.imagekit.io/gnbfkh1vs/petal_20260521_160151.mp4" type="video/mp4">
+        </video>
     </div>
 
-    <footer>
-        &copy; 2026 NETFLIX DRAMA BOSS - Tous droits réservés.
-    </footer>
+    <hr>
 
-    <script>
-        // URL publicitaire VAST Adcash
-        var adTagUrl = 'https://youradexchange.com/video/select.php?r=11341566';
+    <h2>Lecteur Secondaire — Épisode 2</h2>
+    <div class="video-wrapper">
+        <video id="player2" controls poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+            <source src="https://ik.imagekit.io/gnbfkh1vs/episode-b.mp4" type="video/mp4">
+        </video>
+    </div>
 
-        // Configuration commune pour tous les lecteurs
-        var playerConfig = {
-            layoutControls: { 
-                fillToContainer: true, 
-                responsive: true, 
-                primaryColor: "#E50914",
-                allowDownload: false
-            },
-            vastOptions: { 
-                adList: [{ roll: 'preRoll', vastTag: adTagUrl }] 
-            }
-        };
+    <hr>
 
-        // Sélection de tous les lecteurs via leur classe et initialisation automatique
-        document.querySelectorAll('.drama-player').forEach(function(videoElement) {
-            fluidPlayer(videoElement, playerConfig);
-        });
-    </script>
+    <h2>Lecteur Secondaire — Épisode 3</h2>
+    <div class="video-wrapper">
+        <video id="player3" controls poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+            <source src="https://ik.imagekit.io/gnbfkh1vs/episode-3.mp4" type="video/mp4">
+        </video>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 NETFLIX DRAMA BOSS - Tous droits réservés.
+</footer>
+
+<script>
+const adTag = 'https://youradexchange.com/video/select.php?r=11341570';
+
+fluidPlayer('player1',{
+    layoutControls:{
+        fillToContainer:true,
+        responsive:true,
+        primaryColor:"#E50914"
+    },
+    vastOptions:{
+        adList:[{
+            roll:'preRoll',
+            vastTag: adTag
+        }]
+    }
+});
+
+fluidPlayer('player2',{
+    layoutControls:{
+        fillToContainer:true,
+        responsive:true,
+        primaryColor:"#E50914"
+    },
+    vastOptions:{
+        adList:[{
+            roll:'preRoll',
+            vastTag: adTag
+        }]
+    }
+});
+
+fluidPlayer('player3',{
+    layoutControls:{
+        fillToContainer:true,
+        responsive:true,
+        primaryColor:"#E50914"
+    },
+    vastOptions:{
+        adList:[{
+            roll:'preRoll',
+            vastTag: adTag
+        }]
+    }
+});
+</script>
 
 </body>
 </html>

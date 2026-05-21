@@ -7,13 +7,14 @@
     
     <meta name="description" content="Regardez vos meilleurs dramas en streaming gratuit sur NETFLIX DRAMA BOSS. Profitez de nos lecteurs fluides et rapides pour suivre tous vos épisodes.">
     
+    <!-- Préchargement de l'image de poster principale pour le performance (LCP) -->
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop" fetchpriority="high">
 
+    <!-- Fluid Player CSS & JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fluid-player@3.3.0/src/css/fluidplayer.css" type="text/css"/>
     <script src="https://cdn.jsdelivr.net/npm/fluid-player@3.3.0/win/fluidplayer.min.js"></script>
     
     <style>
-        /* Design d'inspiration Netflix */
         body { 
             background-color: #141414; 
             color: #FFFFFF; 
@@ -23,7 +24,6 @@
             margin: 0;
         }
         
-        /* Barre de navigation / Header */
         header {
             background-color: #000000;
             padding: 20px;
@@ -31,7 +31,7 @@
         }
         
         header h1 {
-            color: #E50914; /* Rouge emblématique */
+            color: #E50914; 
             margin: 0;
             font-size: 2.2rem;
             letter-spacing: 2px;
@@ -52,11 +52,18 @@
         h2 {
             font-size: 1.5rem;
             font-weight: 400;
-            margin-bottom: 20px;
+            margin: 40px 0 20px 0;
             color: #E5E5E5;
         }
         
-        /* Conteneur vidéo - Format 16:9 strict sans déformation */
+        /* Séparateur propre en CSS plutôt que <br><hr><br> */
+        .separator {
+            border: 0;
+            height: 1px;
+            background: #282828;
+            margin: 40px 0;
+        }
+        
         .video-wrapper { 
             background-color: #000;
             border-radius: 8px;
@@ -64,7 +71,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.7); 
             width: 100%;
             aspect-ratio: 16 / 9;
-            margin-bottom: 20px;
         }
 
         .video-wrapper video {
@@ -89,25 +95,26 @@
     <div class="container">
         <h2>Lecteur Principal — Épisode 1</h2>
         <div class="video-wrapper">
-            <video id="netflix-drama-player" controls preload="none" poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+            <video class="drama-player" controls preload="none" poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
                 <source src="https://ik.imagekit.io/gnbfkh1vs/petal_20260521_160151.mp4" type="video/mp4"/>
             </video>
         </div>
         
-        <br><hr><br>
+        <hr class="separator">
         
         <h2>Lecteur Secondaire — Épisode 2</h2>
         <div class="video-wrapper">
-            <video id="netflix-drama-player-2" controls preload="none" poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+            <video class="drama-player" controls preload="none" poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
                 <source src="https://ik.imagekit.io/gnbfkh1vs/episode-b.mp4" type="video/mp4"/>
             </video>
         </div>
 
-        <br><hr><br>
+        <hr class="separator">
 
         <h2>Lecteur Secondaire — Épisode 3</h2>
         <div class="video-wrapper">
-            <video id="netflix-drama-player-3" controls preload="none" poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+            <video class="drama-player" controls preload="none" poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+                <!-- Note : Pensez à renommer ce fichier en "episode-3.mp4" (sans accent) sur votre ImageKit si possible -->
                 <source src="https://ik.imagekit.io/gnbfkh1vs/%C3%A9pisode-3.mp4" type="video/mp4"/>
             </video>
         </div>
@@ -118,40 +125,25 @@
     </footer>
 
     <script>
-        // Votre URL publicitaire VAST Adcash unique
+        // URL publicitaire VAST Adcash
         var adTagUrl = 'https://youradexchange.com/video/select.php?r=11341566';
 
-        // Configuration du Lecteur 1
-        var dramaPlayer1 = fluidPlayer('netflix-drama-player', {
+        // Configuration commune pour tous les lecteurs
+        var playerConfig = {
             layoutControls: { 
                 fillToContainer: true, 
                 responsive: true, 
                 primaryColor: "#E50914",
                 allowDownload: false
             },
-            vastOptions: { adList: [{ roll: 'preRoll', vastTag: adTagUrl }] }
-        });
+            vastOptions: { 
+                adList: [{ roll: 'preRoll', vastTag: adTagUrl }] 
+            }
+        };
 
-        // Configuration du Lecteur 2
-        var dramaPlayer2 = fluidPlayer('netflix-drama-player-2', {
-            layoutControls: { 
-                fillToContainer: true, 
-                responsive: true, 
-                primaryColor: "#E50914",
-                allowDownload: false
-            },
-            vastOptions: { adList: [{ roll: 'preRoll', vastTag: adTagUrl }] }
-        });
-
-        // Configuration du Lecteur 3
-        var dramaPlayer3 = fluidPlayer('netflix-drama-player-3', {
-            layoutControls: { 
-                fillToContainer: true, 
-                responsive: true, 
-                primaryColor: "#E50914",
-                allowDownload: false
-            },
-            vastOptions: { adList: [{ roll: 'preRoll', vastTag: adTagUrl }] }
+        // Sélection de tous les lecteurs via leur classe et initialisation automatique
+        document.querySelectorAll('.drama-player').forEach(function(videoElement) {
+            fluidPlayer(videoElement, playerConfig);
         });
     </script>
 

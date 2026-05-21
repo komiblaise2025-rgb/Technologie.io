@@ -58,6 +58,14 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.7); 
+            margin-bottom: 40px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #333;
+            margin: 40px 0;
         }
 
         footer {
@@ -75,21 +83,23 @@
     </header>
 
     <div class="container">
-        <h2>Lecteur Principal — Regarder votre Drama</h2>
-
+        
+        <h2>Lecteur Principal — Épisode 1</h2>
         <div class="video-wrapper">
             <video id="netflix-drama-player" controls poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
                 <source src="https://ik.imagekit.io/gnbfkh1vs/petal_20260521_160151.mp4" type="video/mp4"/>
             </video>
         </div>
-        <br><hr><br>
-        <h2>Lecteur Principal — Regarder votre Drama</h2>
+        
+        <hr>
+        
+        <h2>Lecteur Secondaire — Épisode 2</h2>
+        <div class="video-wrapper">
+            <video id="netflix-drama-player-2" controls poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+                <source src="https://ik.imagekit.io/gnbfkh1vs/episode-b.mp4" type="video/mp4"/>
+            </video>
+        </div>
 
-<div class="video-wrapper">
-    <video id="netflix-drama-player-2" controls poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
-        <source src="https://ik.imagekit.io/gnbfkh1vs/episode-b.mp4" type="video/mp4"/>
-    </video>
-</div>
     </div>
 
     <footer>
@@ -97,20 +107,40 @@
     </footer>
 
     <script>
-        // Configuration du lecteur Fluid Player avec votre publicité VAST Adcash
-        var dramaPlayer = fluidPlayer(
+        // 1. Configuration du Premier Lecteur (Épisode 1)
+        var dramaPlayer1 = fluidPlayer(
             'netflix-drama-player',
             {
                 layoutControls: {
-                    fillToContainer: true, // S'adapte parfaitement au bloc
+                    fillToContainer: true,
                     responsive: true,
-                    primaryColor: "#E50914" /* Change la couleur des boutons du player en rouge Netflix */
+                    primaryColor: "#E50914"
                 },
                 vastOptions: {
                     adList: [
                         {
-                            roll: 'preRoll', // La publicité se lance juste avant le début du drama
-                            // ICI : Votre tag VAST Adcash mis à jour
+                            roll: 'preRoll',
+                            vastTag: 'https://youradexchange.com/video/select.php?r=11340882' 
+                        }
+                    ]
+                }
+            }
+        );
+
+        // 2. Configuration du Deuxième Lecteur (Épisode 2)
+        var dramaPlayer2 = fluidPlayer(
+            'netflix-drama-player-2',
+            {
+                layoutControls: {
+                    fillToContainer: true,
+                    responsive: true,
+                    primaryColor: "#E50914"
+                },
+                vastOptions: {
+                    adList: [
+                        {
+                            roll: 'preRoll',
+                            // Vous pouvez changer ce lien si vous avez une autre zone Adcash pour l'épisode 2
                             vastTag: 'https://youradexchange.com/video/select.php?r=11340882' 
                         }
                     ]

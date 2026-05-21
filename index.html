@@ -9,8 +9,8 @@
     
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop" fetchpriority="high">
 
-    <link rel="stylesheet" href="https://cdn.fluidplayer.com/v3/fluidplayer.min.css" type="text/css"/>
-<script src="https://cdn.fluidplayer.com/v3/fluidplayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fluid-player@3.3.0/src/css/fluidplayer.css" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/fluid-player@3.3.0/win/fluidplayer.min.js"></script>
     
     <style>
         /* Design d'inspiration Netflix */
@@ -114,35 +114,38 @@
     </footer>
 
     <script>
-        var dramaPlayer1 = fluidPlayer(
-            'netflix-drama-player',
-            {
-                layoutControls: { fillToContainer: true, responsive: true, primaryColor: "#E50914" },
-                vastOptions: {
-                    adList: [{ roll: 'preRoll', vastTag: 'https://youradexchange.com/video/select.php?r=11340882' }]
+        // Dès que la page est chargée, on applique le style Fluid Player
+        window.onload = function() {
+            var dramaPlayer1 = fluidPlayer(
+                'netflix-drama-player',
+                {
+                    layoutControls: { fillToContainer: true, responsive: true, primaryColor: "#E50914" },
+                    vastOptions: {
+                        adList: [{ roll: 'preRoll', vastTag: 'https://youradexchange.com/video/select.php?r=11340882' }]
+                    }
                 }
-            }
-        );
+            );
 
-        var dramaPlayer2 = fluidPlayer(
-            'netflix-drama-player-2',
-            {
-                layoutControls: { fillToContainer: true, responsive: true, primaryColor: "#E50914" },
-                vastOptions: {
-                    adList: [{ roll: 'preRoll', vastTag: 'https://youradexchange.com/video/select.php?r=11340882' }]
+            var dramaPlayer2 = fluidPlayer(
+                'netflix-drama-player-2',
+                {
+                    layoutControls: { fillToContainer: true, responsive: true, primaryColor: "#E50914" },
+                    vastOptions: {
+                        adList: [{ roll: 'preRoll', vastTag: 'https://youradexchange.com/video/select.php?r=11340882' }]
+                    }
                 }
-            }
-        );
+            );
 
-        var dramaPlayer3 = fluidPlayer(
-            'netflix-drama-player-3',
-            {
-                layoutControls: { fillToContainer: true, responsive: true, primaryColor: "#E50914" },
-                vastOptions: {
-                    adList: [{ roll: 'preRoll', vastTag: 'https://youradexchange.com/video/select.php?r=11340882' }]
+            var dramaPlayer3 = fluidPlayer(
+                'netflix-drama-player-3',
+                {
+                    layoutControls: { fillToContainer: true, responsive: true, primaryColor: "#E50914" },
+                    vastOptions: {
+                        adList: [{ roll: 'preRoll', vastTag: 'https://youradexchange.com/video/select.php?r=11340882' }]
+                    }
                 }
-            }
-        );
+            );
+        };
     </script>
 
 </body>

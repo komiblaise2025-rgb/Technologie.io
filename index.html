@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NETFLIX DRAMA BOSS - Streaming Gratuit</title>
     
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop" fetchpriority="high">
+
     <link rel="stylesheet" href="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.css" type="text/css"/>
     <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
     
@@ -58,7 +60,7 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.7); 
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
         hr {
@@ -82,12 +84,11 @@
         <h1>NETFLIX <span>DRAMA BOSS</span></h1>
     </header>
 
-    <main class="container">
-        
+    <div class="container">
         <h2>Lecteur Principal — Épisode 1</h2>
         <div class="video-wrapper">
-            <video id="netflix-drama-player" controls poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
-                <source src="https://ik.imagekit.io/gnbfkh1vs/episode-a.mp4" type="video/mp4"/>
+            <video id="netflix-drama-player" controls fetchpriority="high" poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+                <source src="https://ik.imagekit.io/gnbfkh1vs/petal_20260521_160151.mp4" type="video/mp4"/>
             </video>
         </div>
         
@@ -99,80 +100,51 @@
                 <source src="https://ik.imagekit.io/gnbfkh1vs/episode-b.mp4" type="video/mp4"/>
             </video>
         </div>
-        
-        <hr>
-        
-      <h2>Lecteur Secondaire-Episode 3</h2>
 
-<div class="video-wrapper">
-    <video id="netflix-drama-player-3" controls poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
-        <source src="https://ik.imagekit.io/gnbfkh1vs/%C3%A9pisode-3.mp4" type="video/mp4"/>
-    </video>
-</div>  
-    </main>
+        <hr>
+
+        <h2>Lecteur Secondaire — Épisode 3</h2>
+        <div class="video-wrapper">
+            <video id="netflix-drama-player-3" controls poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+                <source src="https://ik.imagekit.io/gnbfkh1vs/episode-c.mp4" type="video/mp4"/>
+            </video>
+        </div>
+    </div>
 
     <footer>
         &copy; 2026 NETFLIX DRAMA BOSS - Tous droits réservés.
     </footer>
 
     <script>
-        // 1. Configuration du Premier Lecteur (Épisode 1)
+        // Configuration du premier lecteur (Épisode 1)
         var dramaPlayer1 = fluidPlayer(
             'netflix-drama-player',
             {
-                layoutControls: {
-                    fillToContainer: true,
-                    responsive: true,
-                    primaryColor: "#E50914"
-                },
+                layoutControls: { fillToContainer: true, responsive: true, primaryColor: "#E50914" },
                 vastOptions: {
-                    adList: [
-                        {
-                            roll: 'preRoll',
-                            vastTag: 'https://youradexchange.com/video/select.php?r=11340882' 
-                        }
-                    ]
+                    adList: [{ roll: 'preRoll', vastTag: 'https://youradexchange.com/video/select.php?r=11340882' }]
                 }
             }
         );
 
-        // 2. Configuration du Deuxième Lecteur (Épisode 2)
+        // Configuration du deuxième lecteur (Épisode 2)
         var dramaPlayer2 = fluidPlayer(
             'netflix-drama-player-2',
             {
-                layoutControls: {
-                    fillToContainer: true,
-                    responsive: true,
-                    primaryColor: "#E50914"
-                },
+                layoutControls: { fillToContainer: true, responsive: true, primaryColor: "#E50914" },
                 vastOptions: {
-                    adList: [
-                        {
-                            roll: 'preRoll',
-                            // Vous pouvez changer ce lien si vous avez une autre zone Adcash pour l'épisode 2
-                            vastTag: 'https://youradexchange.com/video/select.php?r=11340882' 
-                        }
-                    ]
+                    adList: [{ roll: 'preRoll', vastTag: 'https://youradexchange.com/video/select.php?r=11340882' }]
                 }
             }
         );
-        // 3. Configuration du Troisième Lecteur (Épisode 3)
+
+        // Configuration du troisième lecteur (Épisode 3)
         var dramaPlayer3 = fluidPlayer(
             'netflix-drama-player-3',
             {
-                layoutControls: {
-                    fillToContainer: true,
-                    responsive: true,
-                    primaryColor: "#E50914"
-                },
+                layoutControls: { fillToContainer: true, responsive: true, primaryColor: "#E50914" },
                 vastOptions: {
-                    adList: [
-                        {
-                            roll: 'preRoll',
-                            // Vous pouvez changer ce lien si vous avez une autre zone Adcash pour l'épisode 3
-                            vastTag: 'https://youradexchange.com/video/select.php?r=11340882' 
-                        }
-                    ]
+                    adList: [{ roll: 'preRoll', vastTag: 'https://youradexchange.com/video/select.php?r=11340882' }]
                 }
             }
         );

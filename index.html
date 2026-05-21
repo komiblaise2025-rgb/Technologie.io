@@ -89,7 +89,7 @@
     <div class="container">
         <h2>Lecteur Principal — Épisode 1</h2>
         <div class="video-wrapper">
-            <video id="netflix-drama-player" controls fetchpriority="high" poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+            <video id="netflix-drama-player" controls preload="none" poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
                 <source src="https://ik.imagekit.io/gnbfkh1vs/petal_20260521_160151.mp4" type="video/mp4"/>
             </video>
         </div>
@@ -98,7 +98,7 @@
         
         <h2>Lecteur Secondaire — Épisode 2</h2>
         <div class="video-wrapper">
-            <video id="netflix-drama-player-2" controls poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+            <video id="netflix-drama-player-2" controls preload="none" poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
                 <source src="https://ik.imagekit.io/gnbfkh1vs/episode-b.mp4" type="video/mp4"/>
             </video>
         </div>
@@ -107,7 +107,7 @@
 
         <h2>Lecteur Secondaire — Épisode 3</h2>
         <div class="video-wrapper">
-            <video id="netflix-drama-player-3" controls poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+            <video id="netflix-drama-player-3" controls preload="none" poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
                 <source src="https://ik.imagekit.io/gnbfkh1vs/%C3%A9pisode-3.mp4" type="video/mp4"/>
             </video>
         </div>
@@ -121,35 +121,35 @@
         // Votre URL publicitaire VAST Adcash unique
         var adTagUrl = 'https://youradexchange.com/video/select.php?r=11341566';
 
-        // Configuration du Lecteur 1 (Bouton de téléchargement retiré)
+        // Configuration du Lecteur 1
         var dramaPlayer1 = fluidPlayer('netflix-drama-player', {
             layoutControls: { 
                 fillToContainer: true, 
                 responsive: true, 
                 primaryColor: "#E50914",
-                allowDownload: false // Désactive le téléchargement
+                allowDownload: false
             },
             vastOptions: { adList: [{ roll: 'preRoll', vastTag: adTagUrl }] }
         });
 
-        // Configuration du Lecteur 2 (Bouton de téléchargement retiré)
+        // Configuration du Lecteur 2
         var dramaPlayer2 = fluidPlayer('netflix-drama-player-2', {
             layoutControls: { 
                 fillToContainer: true, 
                 responsive: true, 
                 primaryColor: "#E50914",
-                allowDownload: false // Désactive le téléchargement
+                allowDownload: false
             },
             vastOptions: { adList: [{ roll: 'preRoll', vastTag: adTagUrl }] }
         });
 
-        // Configuration du Lecteur 3 (Bouton de téléchargement retiré)
+        // Configuration du Lecteur 3
         var dramaPlayer3 = fluidPlayer('netflix-drama-player-3', {
             layoutControls: { 
                 fillToContainer: true, 
                 responsive: true, 
                 primaryColor: "#E50914",
-                allowDownload: false // Désactive le téléchargement
+                allowDownload: false
             },
             vastOptions: { adList: [{ roll: 'preRoll', vastTag: adTagUrl }] }
         });

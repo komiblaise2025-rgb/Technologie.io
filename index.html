@@ -53,12 +53,21 @@
             color: #E5E5E5;
         }
         
+        /* FORCE LE FORMAT 16:9 PROPREMENT */
         .video-wrapper { 
             background-color: #000;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.7); 
             margin-bottom: 20px;
+            width: 100%;
+            aspect-ratio: 16 / 9; /* Vos lecteurs feront toujours du 16:9 */
+        }
+
+        /* S'assure que Fluid Player occupe tout l'espace du wrapper */
+        .video-wrapper video {
+            width: 100% !important;
+            height: 100% !important;
         }
 
         hr {
@@ -114,7 +123,6 @@
     </footer>
 
     <script>
-        // Dès que la page est chargée, on applique le style Fluid Player
         window.onload = function() {
             var dramaPlayer1 = fluidPlayer(
                 'netflix-drama-player',

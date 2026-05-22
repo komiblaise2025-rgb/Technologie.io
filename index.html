@@ -105,7 +105,13 @@ footer{
 
     <h2>Lecteur Secondaire — Épisode 2</h2>
     <div class="video-wrapper">
-        <video id="player2" controls poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+        <video
+  id="player2"
+  controls
+  preload="auto"
+  fetchpriority="high"
+  playsinline
+  poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
             <source src="https://ik.imagekit.io/gnbfkh1vs/episode-b.mp4" type="video/mp4">
         </video>
     </div>

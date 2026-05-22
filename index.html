@@ -7,8 +7,9 @@
 
 <meta name="description" content="Regardez vos meilleurs dramas en streaming gratuit sur NETFLIX DRAMA BOSS.">
 
-<link rel="preload" as="image" href="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop" fetchpriority="high">
 
+<link rel="stylesheet" href="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.css">
 <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
 
 <style>
@@ -91,12 +92,12 @@ footer{
     <h2>Lecteur Principal — Épisode 1</h2>
     <div class="video-wrapper">
         <video
-  id="player1"
-  controls
-  preload="auto"
-  fetchpriority="high"
-  playsinline
-  poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+            id="player1"
+            controls
+            preload="auto"
+            fetchpriority="high"
+            playsinline
+            poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
             <source src="https://ik.imagekit.io/gnbfkh1vs/petal_20260521_160151.mp4" type="video/mp4">
         </video>
     </div>
@@ -106,12 +107,12 @@ footer{
     <h2>Lecteur Secondaire — Épisode 2</h2>
     <div class="video-wrapper">
         <video
-  id="player2"
-  controls
-  preload="auto"
-  fetchpriority="high"
-  playsinline
-  poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+            id="player2"
+            controls
+            preload="auto"
+            fetchpriority="high"
+            playsinline
+            poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
             <source src="https://ik.imagekit.io/gnbfkh1vs/episode-b.mp4" type="video/mp4">
         </video>
     </div>
@@ -120,8 +121,14 @@ footer{
 
     <h2>Lecteur Secondaire — Épisode 3</h2>
     <div class="video-wrapper">
-        <video id="player3" controls poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
-            <source src="https://ik.imagekit.io/gnbfkh1vs/%C3%A9pisode-3.mp4" type="video/mp4">
+        <video
+            id="player3"
+            controls
+            preload="auto"
+            fetchpriority="high"
+            playsinline
+            poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
+            <source src="https://ik.imagekit.io/gnbfkh1vs/episode-3.mp4" type="video/mp4">
         </video>
     </div>
 

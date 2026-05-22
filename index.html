@@ -9,20 +9,21 @@
 
 <link rel="preload" as="image" href="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop" fetchpriority="high">
 
+<link rel="stylesheet" href="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.css">
 <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
 
 <style>
 body{
     background-color:#141414;
     color:#ffffff;
-    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-family:'Helvetica Neue', Arial, sans-serif;
     margin:0;
     padding:0;
     text-align:center;
 }
 
 header{
-    background:#000;
+    background:#000000;
     padding:20px;
     box-shadow:0 2px 10px rgba(0,0,0,0.8);
 }
@@ -32,10 +33,11 @@ header h1{
     color:#E50914;
     font-size:2rem;
     letter-spacing:2px;
+    font-weight:bold;
 }
 
 header span{
-    color:white;
+    color:#ffffff;
 }
 
 .container{
@@ -51,7 +53,7 @@ h2{
 }
 
 .video-wrapper{
-    background:black;
+    background:#000000;
     border-radius:8px;
     overflow:hidden;
     box-shadow:0 8px 20px rgba(0,0,0,0.7);
@@ -68,12 +70,12 @@ video{
 hr{
     border:none;
     height:1px;
-    background:#333;
+    background:#333333;
     margin:40px 0;
 }
 
 footer{
-    color:#666;
+    color:#BBBBBB;
     font-size:14px;
     padding:30px;
 }
@@ -127,7 +129,7 @@ footer{
             fetchpriority="high"
             playsinline
             poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
-            <source src="https://ik.imagekit.io/gnbfkh1vs/%C3%A9pisode-3.mp4" type="video/mp4">
+            <source src="https://ik.imagekit.io/gnbfkh1vs/episode-3.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -140,43 +142,43 @@ footer{
 <script>
 const adTag = 'https://youradexchange.com/video/select.php?r=11341570';
 
-fluidPlayer('player1',{
-    layoutControls:{
-        fillToContainer:true,
-        responsive:true,
-        primaryColor:"#E50914"
+fluidPlayer('player1', {
+    layoutControls: {
+        fillToContainer: true,
+        responsive: true,
+        primaryColor: "#E50914"
     },
-    vastOptions:{
-        adList:[{
-            roll:'preRoll',
+    vastOptions: {
+        adList: [{
+            roll: 'preRoll',
             vastTag: adTag
         }]
     }
 });
 
-fluidPlayer('player2',{
-    layoutControls:{
-        fillToContainer:true,
-        responsive:true,
-        primaryColor:"#E50914"
+fluidPlayer('player2', {
+    layoutControls: {
+        fillToContainer: true,
+        responsive: true,
+        primaryColor: "#E50914"
     },
-    vastOptions:{
-        adList:[{
-            roll:'preRoll',
+    vastOptions: {
+        adList: [{
+            roll: 'preRoll',
             vastTag: adTag
         }]
     }
 });
 
-fluidPlayer('player3',{
-    layoutControls:{
-        fillToContainer:true,
-        responsive:true,
-        primaryColor:"#E50914"
+fluidPlayer('player3', {
+    layoutControls: {
+        fillToContainer: true,
+        responsive: true,
+        primaryColor: "#E50914"
     },
-    vastOptions:{
-        adList:[{
-            roll:'preRoll',
+    vastOptions: {
+        adList: [{
+            roll: 'preRoll',
             vastTag: adTag
         }]
     }

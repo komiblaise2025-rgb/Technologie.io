@@ -1,189 +1,230 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NETFLIX DRAMA BOSS - Streaming Gratuit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santé Universelle | Votre guide pour le bien-être et la médecine de demain</title>
+    <meta name="description" content="Découvrez Santé Universelle : actualités, innovations médicales et conseils pratiques pour prendre soin de votre bien-être au quotidien.">
+    
+    <!-- Préchargement et optimisation des styles -->
+    <style>
+        /* Variables de design pour une maintenance facile */
+        :root {
+            --primary-color: #0284c7;
+            --secondary-color: #0f172a;
+            --text-color: #334155;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
 
-<meta name="description" content="Regardez vos meilleurs dramas en streaming gratuit sur NETFLIX DRAMA BOSS.">
+        /* Réinitialisation de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<link rel="preload" as="image" href="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop" fetchpriority="high">
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+        }
 
-<link rel="stylesheet" href="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.css">
-<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+        /* En-tête / Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-<style>
-body{
-    background-color:#141414;
-    color:#ffffff;
-    font-family:'Helvetica Neue', Arial, sans-serif;
-    margin:0;
-    padding:0;
-    text-align:center;
-}
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
 
-header{
-    background:#000000;
-    padding:20px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.8);
-}
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
 
-header h1{
-    margin:0;
-    color:#E50914;
-    font-size:2rem;
-    letter-spacing:2px;
-    font-weight:bold;
-}
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
 
-header span{
-    color:#ffffff;
-}
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-.container{
-    max-width:900px;
-    margin:30px auto;
-    padding:0 15px;
-}
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
 
-h2{
-    color:#e5e5e5;
-    font-weight:400;
-    margin:30px 0 15px;
-}
+        /* Section Principale (Hero) */
+        .hero {
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
 
-.video-wrapper{
-    background:#000000;
-    border-radius:8px;
-    overflow:hidden;
-    box-shadow:0 8px 20px rgba(0,0,0,0.7);
-    margin-bottom:30px;
-}
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-video{
-    width:100%;
-    height:auto;
-    max-height:80vh;
-    object-fit:contain;
-}
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
 
-hr{
-    border:none;
-    height:1px;
-    background:#333333;
-    margin:40px 0;
-}
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #475569;
+        }
 
-footer{
-    color:#BBBBBB;
-    font-size:14px;
-    padding:30px;
-}
-</style>
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0369a1;
+        }
+
+        /* Section Contenu (Grille d'articles ou innovations) */
+        .main-content {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* Pied de page */
+        footer {
+            background-color: var(--secondary-color);
+            color: #94a3b8;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-container { flex-direction: column; gap: 15px; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-    <h1>NETFLIX <span>DRAMA BOSS</span></h1>
-</header>
+    <!-- En-tête de navigation -->
+    <header>
+        <nav class="nav-container">
+            <a href="#" class="logo">Santé Universelle</a>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#innovations">Technologies</a></li>
+                <li><a href="#conseils">Conseils</a></li>
+                <li><a href="#contact">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main class="container">
+    <!-- Section d'accueil principale -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>L'innovation technologique au service de la santé globale</h1>
+            <p>Explorez les dernières avancées médicales, les outils connectés et les solutions d'accès universel aux soins pour améliorer votre bien-être au quotidien.</p>
+            <a href="#innovations" class="btn">Découvrir nos articles</a>
+        </div>
+    </section>
 
-    <h2>Lecteur Principal — Épisode 1</h2>
-    <div class="video-wrapper">
-        <video
-            id="player1"
-            controls
-            preload="auto"
-            fetchpriority="high"
-            playsinline
-            poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
-            <source src="https://ik.imagekit.io/gnbfkh1vs/petal_20260521_160151.mp4" type="video/mp4">
-        </video>
-    </div>
+    <!-- Section des fonctionnalités / articles récents -->
+    <main id="innovations" class="main-content">
+        <h2 class="section-title">Dernières Innovations & Actualités</h2>
+        
+        <div class="features-grid">
+            <!-- Carte 1 -->
+            <article class="card">
+                <h3>Santé Connectée & IoT</h3>
+                <p>Comment les objets connectés et les capteurs intelligents transforment le suivi médical à distance et permettent une prévention personnalisée et en temps réel.</p>
+            </article>
 
-    <hr>
+            <!-- Carte 2 -->
+            <article class="card">
+                <h3>Intelligence Artificielle</h3>
+                <p>L'intégration des algorithmes prédictifs dans les diagnostics médicaux modernes pour optimiser la précision, la rapidité et l'efficacité des traitements.</p>
+            </article>
 
-    <h2>Lecteur Secondaire — Épisode 2</h2>
-    <div class="video-wrapper">
-        <video
-            id="player2"
-            controls
-            preload="auto"
-            fetchpriority="high"
-            playsinline
-            poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
-            <source src="https://ik.imagekit.io/gnbfkh1vs/episode-b.mp4" type="video/mp4">
-        </video>
-    </div>
+            <!-- Carte 3 -->
+            <article class="card">
+                <h3>Accès Universel aux Soins</h3>
+                <p>Analyse des plateformes numériques et des solutions open-source qui brisent les barrières géographiques pour apporter la médecine là où elle est nécessaire.</p>
+            </article>
+        </div>
+    </main>
 
-    <hr>
-
-    <h2>Lecteur Secondaire — Épisode 3</h2>
-    <div class="video-wrapper">
-        <video
-            id="player3"
-            controls
-            preload="auto"
-            fetchpriority="high"
-            playsinline
-            poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1025&auto=format&fit=crop">
-            <source src="https://ik.imagekit.io/gnbfkh1vs/episode-3.mp4" type="video/mp4">
-        </video>
-    </div>
-
-</main>
-
-<footer>
-    © 2026 NETFLIX DRAMA BOSS - Tous droits réservés.
-</footer>
-
-<script>
-const adTag = 'https://youradexchange.com/video/select.php?r=11341570';
-
-fluidPlayer('player1', {
-    layoutControls: {
-        fillToContainer: true,
-        responsive: true,
-        primaryColor: "#E50914"
-    },
-    vastOptions: {
-        adList: [{
-            roll: 'preRoll',
-            vastTag: adTag
-        }]
-    }
-});
-
-fluidPlayer('player2', {
-    layoutControls: {
-        fillToContainer: true,
-        responsive: true,
-        primaryColor: "#E50914"
-    },
-    vastOptions: {
-        adList: [{
-            roll: 'preRoll',
-            vastTag: adTag
-        }]
-    }
-});
-
-fluidPlayer('player3', {
-    layoutControls: {
-        fillToContainer: true,
-        responsive: true,
-        primaryColor: "#E50914"
-    },
-    vastOptions: {
-        adList: [{
-            roll: 'preRoll',
-            vastTag: adTag
-        }]
-    }
-});
-</script>
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 Santé Universelle. Tous droits réservés.</p>
+    </footer>
 
 </body>
 </html>

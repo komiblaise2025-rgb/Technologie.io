@@ -234,6 +234,17 @@
     <footer>
         <p>&copy; 2026 Santé Universelle. Tous droits réservés.</p>
     </footer>
-
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-RG91HFR0LD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  // Configuration optimisée pour réduire l'impact sur le fil principal (Main Thread)
+  gtag('config', 'G-RG91HFR0LD', {
+    'send_page_view': true,
+    'transport_type': 'beacon' // Utilise l'API Beacon en arrière-plan
+  });
+</script>
 </body>
 </html>

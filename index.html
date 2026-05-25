@@ -234,28 +234,6 @@
     <footer>
         <p>&copy; 2026 Santé Universelle. Tous droits réservés.</p>
     </footer>
-<script>
-function loadGA() {
-  if (window.gaLoaded) return;
-  window.gaLoaded = true;
 
-  // Création dynamique de la balise script
-  var script = document.createElement('script');
-  script.async = true;
-  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-RG91HFR0LD';
-  document.head.appendChild(script);
-
-  // Initialisation de gtag
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-RG91HFR0LD', { 'transport_type': 'beacon' });
-}
-
-// Déclencheurs d'interaction humaine
-window.addEventListener('scroll', loadGA, { passive: true });
-window.addEventListener('pointerdown', loadGA, { passive: true });
-window.addEventListener('touchstart', loadGA, { passive: true });
-</script>
 </body>
 </html>

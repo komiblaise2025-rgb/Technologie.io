@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technologies & Innovations Médicales | Santé Universelle</title>
+    <meta name="description" content="Découvrez les outils technologiques, l'IA et les innovations connectées qui révolutionnent la santé universelle.">
+    <style>
+        :root {
+            --primary-color: #0284c7;
+            --secondary-color: #0f172a;
+            --text-color: #334155;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, system-ui, sans-serif; line-height: 1.6; color: var(--text-color); background-color: var(--bg-light); }
+        
+        header { background-color: var(--white); box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); text-decoration: none; }
+        .nav-links { display: flex; list-style: none; gap: 20px; }
+        .nav-links a { text-decoration: none; color: var(--secondary-color); font-weight: 500; }
+        .nav-links a.active { color: var(--primary-color); font-weight: 700; }
+
+        .content-header { background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: white; padding: 60px 20px; text-align: center; }
+        .content-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .tech-article { background: var(--white); padding: 30px; border-radius: 8px; margin-bottom: 30px; border: 1px solid #e2e8f0; }
+        .tech-article h2 { color: var(--secondary-color); margin-bottom: 15px; }
+        .tech-tag { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
+
+        footer { background-color: var(--secondary-color); color: #94a3b8; text-align: center; padding: 40px 20px; margin-top: 60px; }
+        @media (max-width: 768px) { .nav-container { flex-direction: column; gap: 15px; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <a href="index.html" class="logo">Santé Universelle</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="technologies.html" class="active">Technologies</a></li>
+                <li><a href="conseils.html">Conseils</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-header">
+        <h1>Innovations & Technologies</h1>
+        <p>Les outils numériques au service de la médecine moderne.</p>
+    </div>
+
+    <main class="container">
+        <article class="tech-article">
+            <span class="tech-tag">Intelligence Artificielle</span>
+            <h2>L'IA et le diagnostic précoce des pathologies</h2>
+            <p>Les algorithmes d'apprentissage profond permettent aujourd'hui d'analyser des milliers d'imageries médicales en quelques secondes. Cette vitesse d'exécution offre aux praticiens un outil d'aide à la décision ultra-précis pour repérer les anomalies avant même l'apparition des premiers symptômes visibles.</p>
+         </article>
+
+        <article class="tech-article">
+            <span class="tech-tag">Objets Connectés (IoT)</span>
+            <h2>Les capteurs biométriques et le suivi à distance</h2>
+            <p>Le suivi des constantes vitales (fréquence cardiaque, glycémie, saturation en oxygène) en dehors de l'hôpital révolutionne la prise en charge des maladies chroniques. Les données sont transmises de manière sécurisée en temps réel pour prévenir les crises majeures.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Santé Universelle. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
